@@ -2,7 +2,7 @@
 
 add_newline = false
 command_timeout = 1000
-format = """$os$username$hostname$kubernetes$directory$git_branch$git_status↪ """
+format = """$os$username$hostname$kubernetes$directory↪ """
 
 # Drop ugly default prompt characters
 [character]
@@ -44,7 +44,7 @@ truncation_symbol = ' '
 home_symbol = '󰋜 ~'
 read_only_style = '197'
 read_only = '  '
-format = 'at [$path]($style)[$read_only]($read_only_style) '
+format = '@ [$path]($style)[$read_only]($read_only_style) '
 
 # Shows current git branch
 [git_branch]
