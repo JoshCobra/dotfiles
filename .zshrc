@@ -7,3 +7,4 @@ alias o="open ." # Open the current directory in Finder
 
 
 eval "$(starship init zsh)"
+alias vim=nvim

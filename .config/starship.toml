@@ -2,7 +2,7 @@
 
 add_newline = false
 command_timeout = 1000
-format = """$os$username$hostname$kubernetes$directory↪ """
+format = """$os$username$directory ↪ """
 
 # Drop ugly default prompt characters
 [character]
@@ -25,26 +25,20 @@ Macos = '󰀵'
 
 # Shows the username
 [username]
-style_user = 'white bold'
+style_user = 'green bold'
 style_root = 'black bold'
 format = '[$user]($style)'
 disabled = false
 show_always = true
 
-# Shows the hostname
-[hostname]
-ssh_only = false
-format = '[$hostname](bold yellow) '
-disabled = false
-
 # Shows current directory
 [directory]
 truncation_length = 1
-truncation_symbol = ' '
-home_symbol = '󰋜 ~'
+truncation_symbol = ' - '
+home_symbol = '󰋜'
 read_only_style = '197'
 read_only = '  '
-format = '@ [$path]($style)[$read_only]($read_only_style) '
+format = ' [$path]($style)[$read_only]($read_only_style) '
 
 # Shows current git branch
 [git_branch]
@@ -70,30 +64,4 @@ staged = '[󰐗 staged=${count}](green) '
 renamed = '[󱍸 renamed=${count}](yellow) '
 deleted = '[󰍶 deleted=${count}](red) '
 
-# Shows kubernetes context and namespace
-[kubernetes]
-format = 'via [󱃾 $context\($namespace\)](bold purple) '
-disabled = false
-
 # ---
-
-[vagrant]
-disabled = true
-
-[docker_context]
-disabled = true
-
-[helm]
-disabled = true
-
-[python]
-disabled = true
-
-[nodejs]
-disabled = true
-
-[ruby]
-disabled = true
-
-[terraform]
-disabled = true
